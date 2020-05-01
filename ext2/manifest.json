@@ -1,0 +1,34 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version": 2,
+  "name": "Toxic comments Identifier for SC Project",
+  "version": "1.0.8",
+
+  "description": "Toxic comments Identifier for SC project",
+
+  "icons": {
+    "32": "icons/button.png",
+    "48": "icons/button.png",
+    "128": "icons/button.png"
+  },
+
+  "page_action": {
+    "default_icon": "icons/button.png",
+    "default_popup": "popup.html",
+    "default_title": "PageFontStyle"
+  },
+
+  "background": {
+    "persistent": false,
+    "scripts": ["background.js"]
+  },
+
+  "content_scripts": [
+    {
+      "matches": ["*://www.facebook.com/*"],
+      "js": ["jquery_3.3.1.js","content.js"]
+    }
+  ]
+
+}
