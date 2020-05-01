@@ -1,11 +1,32 @@
 <!doctype html>
+<!--
+ This page is shown when the extension button is clicked, because the
+ "browser_action" field in manifest.json contains the "default_popup" key with
+ value "popup.html".
+ -->
 <html>
-  <head>
-    <title>Hate Speech Detector</title>
-    <script src="popup.js"></script>
-  </head>
-  <body>
-    <h1>Hate Speech Detector</h1>
-    <button id="checkPage">Check this page now!</button>
-  </body>
-</html
+<head>
+    <title>Getting Started Extension's Popup</title>
+    <style>
+        body {
+            font-family: "Segoe UI", "Lucida Grande", Tahoma, sans-serif;
+            font-size: 100%;
+            /* height: 500px;
+             width: 600px;*/
+        }
+
+    </style>
+
+
+</head>
+<body style="width:250px">
+<div id="status"></div>
+<p>Should warn you if you write something hateful on social media.
+    <br> <br>
+    It was created for Social Computing project. <br> <br>
+    <a href="https://www.hatebase.org/">Hatebase </a>is used for the list of words.
+
+</p>
+</body>
+</html>
+
